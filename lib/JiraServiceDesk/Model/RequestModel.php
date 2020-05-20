@@ -38,6 +38,12 @@ class RequestModel
      * @var array
      */
     public $requestParticipants;
+    
+    /**
+     * The ‘name’ field of the customer the request is being raised on behalf of.
+     * @var string
+     */
+    public $raiseOnBehalfOf;
 
     /**
      * @return int
@@ -190,6 +196,24 @@ class RequestModel
     public function addRequestParticipant($requestParticipant)
     {
         $this->requestParticipants[] = $requestParticipant;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRaiseOnBehalfOf()
+    {
+        return $this->raiseOnBehalfOf;
+    }
+
+    /**
+     * @param string $raiseOnBehalfOf
+     * @return RequestModel
+     */
+    public function setRaiseOnBehalfOf($raiseOnBehalfOf)
+    {
+        $this->raiseOnBehalfOf = $raiseOnBehalfOf;
         return $this;
     }
 
