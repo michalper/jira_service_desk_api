@@ -21,8 +21,8 @@
     "atlassian"
   ],
   "require": {
-    "php": ">=5.3",
-    "guzzlehttp/guzzle": "~6.0"
+    "php": ">=7.2.5",
+    "guzzlehttp/guzzle": "^7.0"
   },
   "require-dev": {
   },
